@@ -3,5 +3,9 @@
     <h1>Drink type</h1>
     <p>Coffee</p>
     <p>Tea (help yourself in kitchen)</p>
+
+    <router-link to="/TreatSize">
+      <button>NEXT</button>
+    </router-link>
   </div>
 </template>

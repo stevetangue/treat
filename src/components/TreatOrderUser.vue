@@ -9,5 +9,9 @@
     <br />
     <p>ORDER #09 - GUI - LARGE - CHAI LATEE - Cow Milk - </p>
     <p>comment: BYO cup shortly | READY</p>
+
+    <router-link to="/TreatOrderBarista">
+      <button>BARISTA TODO LIST</button>
+    </router-link>
   </div>
 </template>
