@@ -2,14 +2,14 @@
   <div id="app">
     <h1>Coffee app</h1>
     <nav>
-      <router-link to="/">Login</router-link> => 
-      <router-link to="/TreatDrink">Drink Type</router-link> =>  
-      <router-link to="/TreatSize">Size</router-link> => 
-      <router-link to="/TreatType">Type</router-link> => 
-      <router-link to="/TreatMilkSugar">Milk and Sugar</router-link> =>  
-      <router-link to="/TreatComment">Comment</router-link> 
+      <router-link to="/">Login</router-link> =>
+      <router-link to="/TreatDrink">Drink Type</router-link> =>
+      <router-link to="/TreatSize">Size</router-link> =>
+      <router-link to="/TreatType">Type</router-link> =>
+      <router-link to="/TreatMilkSugar">Milk and Sugar</router-link> =>
+      <router-link to="/TreatComment">Comment</router-link>
       <br />
-      <router-link to="/TreatOrderUser">Order User</router-link> || 
+      <router-link to="/TreatOrderUser">Order User</router-link> ||
       <router-link to="/TreatOrderBarista">Order Barista</router-link>
     </nav>
     <router-view />
@@ -25,12 +25,23 @@ export default {
 </script>
 
 <style>
+
+    body {
+        background-color: #ececec;
+    }
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  background-color: #ececec;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
+
+
+
+
+
+
