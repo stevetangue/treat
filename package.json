@@ -13,6 +13,7 @@
     "es6-promise": "^4.2.5",
     "less": "^3.9.0",
     "less-loader": "^4.1.0",
+    "material-design-icons": "^3.0.1",
     "vue": "^2.5.21",
     "vue-class-component": "^6.3.2",
     "vue-router": "^3.0.2",
