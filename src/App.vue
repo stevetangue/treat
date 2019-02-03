@@ -20,6 +20,36 @@
 export default {
   name: 'app',
   components: {
+  },
+  data: {
+    tDrink: ['coffee', 'tea'],
+    tSize: ['S', 'M', 'L'],
+    tType: ['flatWhite', 'longBlack', 'latte', 'cappuccino'],
+    tMilkSugar: ['cow', 'almond', 'soy', 'lowFat'],
+    tComment: ['comment message'],
+    tOrderUser: [
+      {
+        username: 'SteveT',
+        email: 'steve@redeye',
+        phone: '0401000000',
+        drink: 'coffee',
+        size: 'M',
+        type: 'longBlack',
+        tComment: 'BYO cup',
+      }
+    ],
+    tOrderBarista: [
+      {
+        username: 'SteveT',
+        email: 'steve@redeye',
+        phone: '0401000000',
+        drink: 'coffee',
+        size: 'M',
+        type: 'longBlack',
+        tComment: 'BYO cup',
+        tStatus: 'Waiting', // Waiting, Making, Ready
+      }
+    ]
   }
 }
 </script>
