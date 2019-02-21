@@ -2,16 +2,24 @@
   <div class="barista">
     <h1>Order list</h1>
     <div class="order">
-      <span>01 - Steve T - Flatwhite - Almond milk</span>
-      <button class="btn-order-status">Start</button>
+      <div class="order-detail">
+        <span>03 - Steve T</span><span>|</span>
+        <b>Flatwhite + Almond milk</b>
+        <button class="btn-order-status">Start</button>
+      </div>
     </div>
     <div class="order order-making">
-      <span>02 - Broccolini - Long Black</span> 
-      <button class="btn-order-status">Making</button>
+      <div class="order-detail">
+        <span>02 - Broccolini</span><span>|</span>
+        <b>Flatwhite + Almond milk</b>
+        <button class="btn-order-status">Done</button>
+      </div>
     </div>
     <div class="order order-done">
-      <span>03 - GUI - Latte - Moo Light</span>
-      <button class="btn-order-status">Done</button>
+      <div class="order-detail">
+        <span>01 - GUI - Latte</span><span>|</span>
+        <b>Latte with Moo Light</b>
+      </div>
     </div>
 
     <router-link to="/">
@@ -35,7 +43,12 @@
       animation-duration: 2s;
       animation-iteration-count: infinite;
     }
-
+    &.order-done {
+      background: #bef6be;
+      * {
+        text-decoration: line-through;
+      }
+    }
     @keyframes color {
       0% {
         background: rgb(226, 195, 19);
@@ -48,17 +61,23 @@
       }
     }
 
-    &.order-done {
-      background: #bef6be;
-      text-decoration: line-through;
-    }
-    span {
-      float: left;
-      margin-top: 1.1rem;
-      margin-left: 1rem;
-    }
-    button {
-      float: right;
+    .order-detail {
+      span:first-child {
+        display: inline-block;
+        width: 11rem;
+        height: 1.5rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      span, b {
+        float: left;
+        padding: 1rem;
+        text-overflow: ellipsis;
+      }
+      button {
+        float: right;
+        margin: 1rem;
+      }
     }
   }
 

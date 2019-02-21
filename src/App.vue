@@ -86,7 +86,7 @@
 
   .order-box {
     height: auto;
-    width: 50%;
+    width: 65%;
     margin: 10em auto;
     border-radius: 3%;
     background-color: white;

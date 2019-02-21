@@ -47,7 +47,7 @@
       width: 50%;
       padding: 1rem;
       margin-left: 0.5rem;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
       border-radius: 0.5rem;
       box-shadow: none;
       border: 1px solid #ddd;
