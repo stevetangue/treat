@@ -1,11 +1,9 @@
 <template>
   <div id="app">
-    <h1>Coffee app</h1>
     <div class="order-tracking-bar">
       <nav>
         <ul class="progress-bar" >
           <li v-for="route in routes" :key="route.url" class="progress-bar__items">
-
             <router-link :to="route.url">
               <i class="material-icons">check_circle_outline</i>
               <span>{{route.label}}</span>
@@ -61,45 +59,58 @@
 }
 </script>
 
-<style lang="less">
-    body {
-      background-color: #ececec;
-      text-align: center;
-      height: 100%;
-      font-size: 16px;
-    }
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Karla');
+  
+  body {
+    background-color: #ececec;
+    text-align: center;
+    height: 100%;
+    font-size: 10px;
+    font-family: 'Karla', sans-serif;
+  }
 
-    .order-tracking-bar {
-      padding: 1em 1em 0 1em;
-    }
+  p {
+    font-size: 1rem
+  }
 
-    .order-box {
-      height: 30em;
-      width: 40em;
-      margin: 3em auto;
-      border-radius: 3%;
-      background-color: white;
-      box-shadow: 0 0 15px 0 #c0bfbf;
-    }
-    .progress-bar {
-      list-style: none;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
+  h1 {
+    padding:0;
+    margin: 0 0 2rem 0;
+    font-size: 3rem;
+  }
 
-      &__items {
+  .order-tracking-bar {
+    padding: 1em 1em 0 1em;
+  }
 
-        a {
-          display: flex;
-          flex-direction: column;
-          text-decoration: none;
-        }
-        span {
-          padding-top: 0.5em;
-          color: black;
-        }
-      }
-    }
+  .order-box {
+    height: auto;
+    width: 50%;
+    margin: 10em auto;
+    border-radius: 3%;
+    background-color: white;
+    box-shadow: 0 0 15px 0 #c0bfbf;
+    padding: 3rem 1rem;
+  }
+
+  .progress-bar {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .progress-bar__items a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+  }
+
+  .progress-bar__items  span {
+    padding-top: 0.5em;
+    color: black;
+  }
 </style>
 
 

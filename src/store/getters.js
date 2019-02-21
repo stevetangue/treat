@@ -1,6 +1,6 @@
 export const order = state => state.order
 
-const limit = 5
+// const limit = 5
 
 // export const recentHistory = state => {
 //   const end = state.history.length
