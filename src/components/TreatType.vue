@@ -51,26 +51,32 @@
 <script>
 import Vue from "vue";
 import Component from "vue-class-component";
+import { orderType } from '../store/actions';
 
 @Component({
-  components: {}
+  components: {},
 })
 class TreatType extends Vue {
   /*
    * data
    */
-  username = "steve";
-  shot = "double";
-  /*
-   * components
-   */
+  username = '';
+  shot = 'single';
 
   /*
    * methods
    */
   orderCoffee(coffee) {
     /*eslint no-console: ["error", { allow: ["log"] }] */
-    let yo = console.log("Treat type", coffee);
+    const order = {
+      username: this.username,
+      shot: this.shot,
+      type: coffee
+    }
+    console.log('state', this.$store.state);
+    let yo = console.log("Treat Order", order);
+    
+    // this.$store.dispatch(orderType, order);
     return yo;
   }
 }
