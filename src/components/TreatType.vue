@@ -51,7 +51,6 @@
 <script>
 import Vue from "vue";
 import Component from "vue-class-component";
-import { orderType } from '../store/actions';
 
 @Component({
   components: {},
@@ -73,11 +72,8 @@ class TreatType extends Vue {
       shot: this.shot,
       type: coffee
     }
-    console.log('state', this.$store.state);
-    let yo = console.log("Treat Order", order);
-    
-    // this.$store.dispatch(orderType, order);
-    return yo;
+
+    this.$store.dispatch('actionOrderType', order);
   }
 }
 

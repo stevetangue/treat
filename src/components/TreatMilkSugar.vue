@@ -50,9 +50,8 @@ class TreatMilkSugar extends Vue {
   /*
    * methods
    */
-  orderCoffee(coffee) {
-    /*eslint no-console: ["error", { allow: ["log"] }] */
-    console.log("Treat milk sugar", coffee);
+  orderCoffee(milk) {
+    this.$store.dispatch('actionOrderMilk', milk);
   }
 }
 export default TreatMilkSugar;
