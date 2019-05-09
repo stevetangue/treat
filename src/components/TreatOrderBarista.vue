@@ -1,10 +1,14 @@
+<!-- *************************************************************************
+	TEMPLATE
+	************************************************************************* -->
+
 <template>
   <div class="barista">
     <h1>Order list</h1>
     <div class="order">
       <div class="order-detail">
-        <span>03 - Steve T</span><span>|</span>
-        <b>Flatwhite + Almond milk</b>
+        <span>03 - {{ order.username }}</span><span>|</span>
+        <b> {{ order.type }} + {{ order.milk }}</b>
         <button class="btn-order-status">Start</button>
       </div>
     </div>
@@ -28,6 +32,38 @@
   </div>
 </template>
 
+<!-- *************************************************************************
+	SCRIPT
+	************************************************************************* -->
+<script>
+import Vue from "vue";
+import Component from "vue-class-component";
+
+@Component({
+  components: {},
+})
+class TreatOrderBarista extends Vue {
+  /*
+   * data
+   */
+
+  /*
+   * components
+   */
+
+  /*
+   * methods
+   */
+  get order () {
+    return this.$store.state.order;
+  }
+}
+export default TreatOrderBarista;
+</script>
+
+<!-- *************************************************************************
+	STYLE
+	************************************************************************* -->
 <style lang=less>
 .barista {
   .order {
@@ -73,6 +109,7 @@
         float: left;
         padding: 1rem;
         text-overflow: ellipsis;
+        text-transform: capitalize;
       }
       button {
         float: right;
